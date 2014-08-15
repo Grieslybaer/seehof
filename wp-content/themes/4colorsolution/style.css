@@ -1,0 +1,871 @@
+/*
+Theme Name: 4ColorSolution
+Theme URI: http://www.4csolution.at
+Description: Template für 4ColorSolution
+Author: Stephan Grießner
+Author URI: http://www.multimediatechnology.at/~fhs34773/blog/
+*/
+
+@charset "UTF-8";
+/* CSS Document */
+
+/**
+* Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+* http://cssreset.com
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* End css reset */
+
+/* ----------------------------------------------------------- Smartphone ----------------------------------------------------------- */
+body {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	background-color: rgb(245,245,245);
+	background-image: url(img/background.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+div#wrapper {
+	background-color: rgba(245,245,245,0.8);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0.5em;
+	color: rgb(51,51,51);
+}
+
+h1 {
+	font-size: 24px;
+}
+.clear {
+	clear: both;	
+}
+div#header {
+	width: 100%;
+	background-color: rgba(51,51,51,1.0);
+	/*background-image: linear-gradient(to bottom, #444444, #333333);*/
+}
+
+div.menu ul li {
+	height: 56px;
+	line-height: 33px;
+}
+
+div.menu ul li a {
+	display: block;
+	margin: 0px 10px 0px 3px;
+	font-size: 24px;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	padding: 3px 10px 5px 10px;
+	border-color: rgb(51,51,51);
+	border-style: solid;
+	border-radius: 8px 8px 0 0;
+	border-top-width: 10px;
+	border-left-width: 12px;
+	border-right-width: 150px;
+	transition:all 0.5s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+	/*text-transform: uppercase;*/
+}
+
+div.menu ul li a:hover,
+div.menu ul li.current_page_item a {
+	/*color: rgb(153,153,153);*/
+	/*color: rgb(51,51,51);*/
+	/*background-color: rgb(245,245,245);*/
+	/*border-top: 1px solid rgb(245,245,245);*/
+	border-radius: 6px 6px 0 0;
+}
+
+div.menu ul li a:hover,
+div.menu ul li.current_page_item a {
+	/*padding: 5px 10px 0 10px;
+	background-color: rgb(182,201,49);*/
+	border-style: solid;
+	border-radius: 8px 8px 0 0;
+	border-top-width: 10px;
+	border-left-width: 12px;
+	border-right-width: 150px;
+	border-bottom-width: 5px;
+}
+
+div.menu ul li a:hover {
+transition: background-color 0.5s linear 0s, border-color 0.5s linear 0s;
+-webkit-transition: background-color 0.5s linear 0s, border-color 0.5s linear 0s;
+}
+
+div.menu ul li:first-child a:hover,
+div.menu ul li.current_page_item:first-child a{
+	border-color: rgb(182,201,49);
+	background-color: rgb(182,201,49);
+}
+
+div.menu ul li:nth-child(2) a:hover,
+div.menu ul li.current_page_item:nth-child(2) a {
+	border-color: rgb(214,124,28);
+	background-color: rgb(214,124,28);
+}
+div.menu ul li:nth-child(3) a:hover,
+div.menu ul li.current_page_item:nth-child(3) a {
+	border-color: rgb(128,33,126);
+	background-color: rgb(128,33,126);
+}
+div.menu ul li:nth-child(4) a:hover,
+div.menu ul li.current_page_item:nth-child(4) a {
+	border-color: rgb(194,14,26);
+	background-color: rgb(194,14,26);
+}
+
+div.menu ul li {
+	display: block;
+	width: 100%;
+	border-bottom: 2px solid rgb(61,61,61);
+}
+	
+div#logo {
+	margin:0 auto;
+	background-color: rgb(255,255,255);
+	width: 90%;
+	/*min-width: 200px;
+	max-width: 400px;*/
+	height: auto;
+	-moz-box-shadow:    0 10px 10px -6px #333;
+	-webkit-box-shadow: 0 10px 10px -6px #333;
+	box-shadow:         0 10px 10px -6px #333;
+	/*-moz-box-shadow:    0 8px 10px -6px #ccc;
+	-webkit-box-shadow: 0 8px 10px -6px #ccc;
+	box-shadow:         0 8px 10px -6px #ccc;*/
+	
+}
+
+img#logo_pic {
+	width: 92%;
+	margin: 20px 20px;
+}
+/* ================================== Posts ================================== */
+div.post {
+	background-color: rgba(255,255,255,0.5);
+	padding: 10px 3%;
+}
+h3.storytitle {
+	color: rgb(51,51,51);
+	border-bottom: 1px solid rgb(201,201,201);
+}
+
+/* ============================== Seite - 1 spaltig =========================== */
+div#main {
+	width: 90%;
+	/*height: 500px;*/
+	margin: 10px auto;
+}
+div.main_content {
+	width: 95%;
+	margin: 20px auto;
+	background-color: rgba(255,255,255,0.9);
+	padding: 15px 2.5%;
+}
+
+div#profil p {
+	/*margin-left: 225px;*/
+}
+img#profil_pic {
+	width: 200px;
+	height: auto;
+	border: 1px solid rgb(61,61,61);
+	padding: 4px;
+	background-color: rgb(255,255,255);
+	float:left;
+	margin-right: 20px;
+	margin-bottom: 15px;
+}
+div.float_clear {
+	clear:both;
+}
+div#description {
+	width: 95%;
+	margin: 20px auto;
+}
+
+div.description_point {
+	background-color: rgb(255,255,255);
+	margin: 10px auto;
+	/*margin: 20px 5px;*/
+	float: left;
+	width: 90%;
+	/*height: 200px;*/
+	height: auto;
+	-moz-box-shadow:    0 10px 10px -6px #333;
+  	-webkit-box-shadow: 0 10px 10px -6px #333;
+  	box-shadow:         0 10px 10px -6px #333;
+	padding: 15px 5%;
+}
+div.description_point h3 {
+	font-size: 20px;
+}
+
+div.description_point:last-child {
+	margin-bottom: 30px;
+}
+
+div#consulting {
+	background-image: url(img/beratung.png);
+	background-size:70%;
+	background-repeat:no-repeat;
+	background-position: 50% 50%;
+}
+
+div#planning {
+	background-image: url(img/planung.png);
+	background-size:30%;
+	background-repeat:no-repeat;
+	background-position: 50% 50%;
+}
+
+div#design {
+	background-image: url(img/gestaltung.png);
+	background-size:30%;
+	background-repeat:no-repeat;
+	background-position: 50% 50%;
+}
+
+div#web {
+	background-image: url(img/web.png);
+	background-size:50%;
+	background-repeat:no-repeat;
+	background-position: 50% 50%;
+}
+div#advertising {
+	background-image: url(img/werbung.png);
+	background-size:50%;
+	background-repeat:no-repeat;
+	background-position: 50% 50%;
+}
+div#print {
+	background-image: url(img/druck.png);
+	background-size:50%;
+	background-repeat:no-repeat;
+	background-position: 50% 50%;
+}
+
+/* ============================== Seite - Kontaktformular =========================== */
+
+div#post-5, div#post-4 {
+	width: 90%;
+	margin: 30px auto;
+}
+
+h3.storytitle {
+	font-size: 24px;	
+}
+
+form.wpcf7-form p {
+	margin-top:10px;
+}
+
+form.wpcf7-form p:nth-child(7) {
+	margin-top:30px;
+}
+form.wpcf7-form p span input[type=text], form.wpcf7-form p span input[type=email] {
+	font-family: "Helvetica Neue", Helvetica, Arial, Gotham, sans-serif;
+	width: 97%;
+	height: 20px;
+	font-size: 16px;
+	margin: 0 auto;
+}
+
+form.wpcf7-form p span textarea {
+	width: 97%;
+	font-size: 16px;
+	font-family: "Helvetica Neue", Helvetica, Arial, Gotham, sans-serif;
+	padding: 2px;
+}
+
+form.wpcf7-form p input[type=submit] {
+	display: block;
+	width: 100%;
+	height: 43px;
+	margin: 20px auto;
+	background-color: #006DCC;
+    background-image: linear-gradient(to bottom, #0088CC, #0044CC);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	border-radius: 6px 6px 6px 6px;
+    font-size: 17.5px;
+    padding: 11px 19px;
+}
+form.wpcf7-form p input[type=submit]:hover {
+	background-color: #0044cc;
+	background-position: 0 -15px;
+	transition: background-position 0.1s linear 0s;
+}
+/* ============================== Referenzen =========================== */
+div.gallery-size-thumbnail .gallery-item {
+	width: 100%;
+	display:none;
+}
+div.gallery-size-thumbnail .gallery-item:first-child {
+	display: block;
+}
+div.gallery-size-thumbnail br {
+	display:none;
+}
+div.gallery-size-thumbnail dl dd {
+	display:none;	
+}
+div.gallery-size-thumbnail dl dt img.attachment-thumbnail{
+	width: 95%;
+	height: auto;
+	padding: 1%;
+	background-color: rgb(255,255,255);
+	/*border: 1px solid rgb(201,201,201);*/
+	border: none;
+	-moz-box-shadow:    0 10px 10px -6px #333;
+  	-webkit-box-shadow: 0 10px 10px -6px #333;
+  	box-shadow:         0 10px 10px -6px #333;
+}
+
+/* ============================== Fußzeile =========================== */
+footer {
+	width: 100%;
+	/*height: 170px;*/
+	background-color: rgb(51,51,51);
+	clear: both;
+}
+
+div#footer {
+	width: 90%;
+	/*margin: 10px auto;*/
+	padding: 10px 5%;
+}
+
+div.footer_col {
+	display: none;
+}
+
+div.footer_col:first-child {
+	display: block;
+	/*height: 130px;*/
+	background-color: rgb(61,61,61);
+	/*float: left;*/
+	width: 90%;
+	margin: 0 auto;
+	/*border-right: 2px solid rgb(51,51,51);
+	border-left: 2px solid rgb(51,51,51);
+	border-collapse: collapse;*/
+	padding: 10px 4%;
+}
+
+footer p {
+	line-height: 1.2em;
+	color: rgb(245,245,245);
+}
+
+footer h3 {
+	margin-bottom: 10px;
+	color: rgb(245,245,245);
+	font-size: 18px;
+	font-weight: 800;
+}
+img#footer_logo {
+	width: 70%;
+	background-color: rgb(255,255,255);
+	padding: 2px;
+}
+footer div#footer_colright a {
+	display: block;
+	margin-bottom: 10px;
+	text-decoration: none;
+	color: rgb(204,204,204);
+}
+.highlight {
+	font-weight: 500;
+}
+footer div#footer_colright a:hover {
+	color: rgb(255,255,255);
+}
+
+
+/* ----------------------------------------------------------- Tablet ----------------------------------------------------------- */
+@media (min-width: 768px)  {
+/* and (max-width: 979px) */
+div#wrapper {
+	background-image: url(img/4_colors.png);
+	background-repeat: repeat-y;
+	background-position: 90% 10%;
+	background-size: 20%;
+}
+div#header {
+	width: 45%;
+	/*height: 68px;*/
+	float: right;
+	/*margin-left: 46%;*/
+	margin-bottom: 20px;
+}
+div.menu {
+	/*width: 50%;
+	margin-left: 45%;*/
+	width: 90%;
+	margin-left: 5%;
+	margin-rigth: 5%;
+}
+
+	
+div.menu ul li {
+	/*float: left;*/
+	display: block;
+	width: 100%;
+	height: 56px;
+	line-height: 33px;
+	padding: 5px 2px 0 0;
+	margin-top: 4px;
+	/*border-right: 2px solid rgb(51,51,51);
+	border-left: 2px solid rgb(51,51,51);*/
+}
+
+div.menu ul li a {
+	display: block;
+	margin: 0px 3px 0px 0px;
+	font-size: 24px;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	padding: 3px 10px 5px 10px;
+	border-color: rgb(51,51,51);
+	border-style: solid;
+	border-radius: 8px 8px 0 0;
+	border-top-width: 10px;
+	border-left-width: 5px;
+	border-right-width: 19px;
+	/*text-transform: uppercase;*/
+}
+
+div.menu ul li a:hover,
+div.menu ul li.current_page_item a {
+	/*padding: 5px 10px 0 10px;
+	background-color: rgb(182,201,49);*/
+	border-style: solid;
+	border-radius: 8px 8px 0 0;
+	border-top-width: 10px;
+	border-left-width: 5px;
+	border-right-width: 19px;
+	border-bottom-width: 5px;
+}
+
+div#logo {
+	float:left;
+	margin-left: 5%;
+	background-color: rgb(255,255,255);
+	width: 45%;
+	min-width: 200px;
+	/*max-width: 400px;*/
+	height: auto;
+	-moz-box-shadow:    0 10px 10px -6px #333;
+  	-webkit-box-shadow: 0 10px 10px -6px #333;
+  	box-shadow:         0 10px 10px -6px #333;	
+}
+
+
+img#logo_pic {
+	width: 90%;
+	margin: 20px 5%;
+}
+
+/* ============================== Seite - 1 spaltig =========================== */
+div#main {
+	width: 90%;
+	clear: both;
+}
+
+div#description {
+	width: 95%;
+	margin: 20px auto;
+}
+
+div.description_point {
+	margin: 10px 2%;
+	/*margin: 20px 5px;*/
+	width: 40%;
+	padding: 15px 3%;
+}
+/* ============================== Referenzen =========================== */
+div#gallery-1 .gallery-item {
+	width: 50%;
+}
+
+/* ============================== Fußzeile =========================== */
+div.footer_col:nth-child(3) {
+	display: block;
+}
+div.footer_col:first-child {
+	width: 40%;
+	margin-left: 1%;
+}
+
+div.footer_col {
+	float: left;
+	height: 150px;
+	background-color: rgb(61,61,61);
+	/*float: left;*/
+	width: 40%;
+	margin-left: 2%;
+	/*border-right: 2px solid rgb(51,51,51);
+	border-left: 2px solid rgb(51,51,51);
+	border-collapse: collapse;*/
+	padding: 10px 4%;
+}
+footer div#footer_colright {
+	background-image: url(img/4_colors.png);
+	background-size:30%;
+	background-repeat:repeat-y;
+	background-position: 90% 90%;
+	
+}
+}
+/* ----------------------------------------------------------- Desktop ----------------------------------------------------------- */
+@media (min-width: 980px) {
+	/* ============================== Kopfzeile =========================== */
+div#top {
+	background-color: rgb(51,51,51);
+	width: 100%;
+	height: 68px;
+}
+div#header {
+	width: 90%;
+	max-width: 1000px;
+	height: 68px;
+	margin: 0 auto;
+	float: none;
+}
+div.menu {
+	width: 60%;
+	margin-left: 40%;
+}
+div.menu ul li {
+	float: left;
+	display: inline;
+	width: auto;
+	height: 55px;
+	line-height: 33px;
+	padding: 5px 8px 0 8px;
+	/*margin-top: 12px;
+	border-right: 2px solid rgb(51,51,51);
+	border-left: 2px solid*/
+}
+
+div#logo_row {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+div#logo {
+	margin-left: 0px;
+	width: 40%;
+	min-width: 200px;
+	float: left;
+	margin-bottom: 40px;
+}
+
+
+img#logo_pic {
+	width: 90%;
+	margin: 20px 20px;
+}
+
+/* ============================== Seite - 1 spaltig =========================== */
+div#main {
+	width: 90%;
+	max-width: 940px;
+	margin: 0 auto;
+}
+/* ============================== Referenzen =========================== */
+div#gallery-1 .gallery-item {
+	width: 33%;
+}
+/* ============================== Kontaktformular =========================== */
+form.wpcf7-form p input[type=submit] {
+	width: 50%;
+	margin: 20px auto;
+}
+/* ============================== Fußzeile =========================== */
+div#footer {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+div.footer_col:nth-child(2) {
+	display: block;
+}
+div.footer_col:first-child {
+	width: 28%;
+	margin-left: 1%;
+	padding: 10px 2%;
+}
+
+div.footer_col {
+	float: left;
+	/*height: 130px;*/
+	background-color: rgb(61,61,61);
+	/*float: left;*/
+	width: 28%;
+	margin-left: 1%;
+	/*border-right: 2px solid rgb(51,51,51);
+	border-left: 2px solid rgb(51,51,51);
+	border-collapse: collapse;*/
+	padding: 10px 2%;
+}
+footer blockquote {
+	width: 90%;
+	color: rgba(255,255,255, 0.5);
+	margin: 20% auto;
+}
+div#footer_colmiddle {
+	background-image: url(img/zitat_zeichen.png), url(img/zitat_zeichen.png);
+	background-position: 10% 95%, 90% 5%;
+	background-size: 15%;
+	background-repeat: no-repeat;
+}
+div#footer_colmiddle p {
+	text-align: right;
+	margin-top: -10px;
+}
+/* ============================== Kopfzeile =========================== */
+/*
+div#main {
+	width: 940px;
+}
+div#header {
+	width: 100%;
+	height: 50px;
+	background-color: rgb(51,51,51);	
+}
+
+div.menu {
+	width: 50%;
+	margin-left: 45%;
+}
+
+div.menu ul li {
+	float: left;
+	display: inline;
+	width: auto;
+	height: 33px;
+	line-height: 33px;
+	padding: 5px 8px 0 8px;
+	margin-top: 12px;
+	border-right: 2px solid rgb(51,51,51);
+	border-left: 2px solid rgb(51,51,51);
+}
+div.menu ul li a {
+	margin: 5px 10px 5px 3px;
+	font-size: 24px;
+	color: rgb(255,255,255);
+	text-decoration: none;
+	padding: 3px 10px 5px 10px;
+
+}
+
+div.menu ul li a:hover,
+div.menu ul li.current_page_item a {
+
+	color: rgb(51,51,51);
+	background-color: rgb(245,245,245);
+
+	border-radius: 6px 6px 0 0;
+}
+
+div.menu ul li:hover,
+div.menu ul li.current_page_item {
+	border-radius: 8px 8px 0 0;
+}
+
+div.menu ul li:first-child:hover,
+div.menu ul li.current_page_item:first-child  {
+	background-color: rgb(182,201,49);
+}
+
+div.menu ul li:nth-child(2):hover,
+div.menu ul li.current_page_item:nth-child(2)  {
+	background-color: rgb(214,124,28);
+}
+div.menu ul li:nth-child(3):hover,
+div.menu ul li.current_page_item:nth-child(3)  {
+	background-color: rgb(128,33,126);
+}
+div.menu ul li:nth-child(4):hover,
+div.menu ul li.current_page_item:nth-child(4)  {
+	background-color: rgb(194,14,26);
+}
+
+/*
+div#logo {
+	margin-left: 15%;
+	background-color: rgb(255,255,255);
+	width: 30%;
+	min-width: 200px;
+	max-width: 400px;
+	height: auto;
+	-moz-box-shadow:    0 10px 10px -6px #333;
+  	-webkit-box-shadow: 0 10px 10px -6px #333;
+  	box-shadow:         0 10px 10px -6px #333;
+	/*-moz-box-shadow:    0 8px 10px -6px #ccc;
+  	-webkit-box-shadow: 0 8px 10px -6px #ccc;
+  	box-shadow:         0 8px 10px -6px #ccc;
+	
+}
+
+
+img#logo_pic {
+	width: 90%;
+	margin: 20px 20px;
+}*/
+
+
+/* ============================== Seite - 1 spaltig =========================== */
+/*
+div#main {
+	width: 70%;
+	height: 500px;
+	margin: 10px auto;
+}
+
+div#description {
+	width: 95%;
+	margin: 20px auto;
+}
+
+div.description_point {
+	background-color: rgb(255,255,255);
+	margin: 4% 1%;
+
+	float: left;
+	width: 30%;
+	height: 200px;
+	-moz-box-shadow:    0 10px 10px -6px #333;
+  	-webkit-box-shadow: 0 10px 10px -6px #333;
+  	box-shadow:         0 10px 10px -6px #333;
+	padding: 10px;
+}
+
+
+/* ============================== Fußzeile =========================== */
+/*
+footer {
+	width: 100%;
+	height: 170px;
+	background-color: rgb(51,51,51);
+	clear: both;
+}
+
+div#footer {
+	width: 70%;
+	margin: 10px auto;
+	padding: 10px 0;
+}
+
+div.footer_col {
+	height: 130px;
+	background-color: rgb(61,61,61);
+	float: left;
+	width: 30%;
+	border-right: 2px solid rgb(51,51,51);
+	border-left: 2px solid rgb(51,51,51);
+	border-collapse: collapse;
+	padding: 10px;
+}
+
+footer p {
+	line-height: 1.2em;
+	color: rgb(245,245,245);
+}
+
+footer h3 {
+	margin-bottom: 10px;
+	color: rgb(245,245,245);
+	font-size: 18px;
+	font-weight: 800;
+}
+}
+
+@media (max-width: 767px) {
+	
+}
+
+@media (min-width: 1200px) {
+	
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	
+}
+
+@media (max-width: 767px) {
+	
+}
+
+@media (max-width: 480px) {
+	
+}
+
+@media (max-width: 979px) {
+	
+}
+
+@media (min-width: 980px) {
+	
+}*/
+
+
+
